@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 5.6.23, for osx10.10 (x86_64)
 --
--- Host: localhost    Database: smartio
+-- Host: localhost    Database: subena
 -- ------------------------------------------------------
 -- Server version	5.6.22
 
@@ -77,33 +77,6 @@ CREATE TABLE `family` (
   `idParent` int(11) NOT NULL DEFAULT '0' COMMENT 'Id de la famille parente',
   PRIMARY KEY (`id`),
   UNIQUE KEY `Id` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Table structure for table `setting`
---
-
-DROP TABLE IF EXISTS `setting`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `setting` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `numberOfLastMeasures` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Table structure for table `settings`
---
-
-DROP TABLE IF EXISTS `settings`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `settings` (
-  `id` int(11) NOT NULL,
-  `numberOfLastMeasures` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
