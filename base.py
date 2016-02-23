@@ -8,12 +8,11 @@ import sqlalchemy
 from sqlalchemy.ext.declarative.api import declarative_base
 from sqlalchemy.orm.session import sessionmaker
 
-try:
-    URLS = {
-        'SQL':os.environ['SMARTIO_DB'],
-    }
-except Exception:
-    raise Exception('Please set both SMARTIO_DB environment variable')
+os.environ['SUBDB']='mysql://root:@localhost:8888/cnim'
+
+URLS = {
+    'SQL':os.environ['SUBDB'],
+}
 
 #print message or not
 parser = argparse.ArgumentParser()
