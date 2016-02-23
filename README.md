@@ -8,7 +8,7 @@ It is currently running on 2 different projects :
 > Fakerz - Fake websites detection - ~~[More info here]()~~
 
 The aim is to detect *unexceptable* things. The whole problem is to define in mathematics words how an event can be considered as *unexceptable*.
-___
+
 ##Requirements
 
 ###Docker
