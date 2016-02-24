@@ -8,7 +8,8 @@ import sqlalchemy
 from sqlalchemy.ext.declarative.api import declarative_base
 from sqlalchemy.orm.session import sessionmaker
 
-os.environ['SUBDB']='mysql://root:@localhost:8888/cnim'
+if os.environ['SUBDB'] == '':
+    os.environ['SUBDB'] = 'mysql://root:@localhost:8888/db_subia'
 
 URLS = {
     'SQL':os.environ['SUBDB'],
