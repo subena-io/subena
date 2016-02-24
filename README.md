@@ -5,6 +5,7 @@ The following project has been developped for bringing a solution to **artificia
 
 It is currently running on 2 different projects :
 > SmartIOT - Intelligency in smart objects  - ~~[More info here]()~~
+
 > Fakerz - Fake websites detection - ~~[More info here]()~~
 
 The aim is to detect *unexceptable* things. The whole problem is to define in mathematics words how an event can be considered as *unexceptable*.
