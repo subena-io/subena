@@ -4,7 +4,7 @@ Welcome to Subena IA project
 The following project has been developped for bringing a solution to **artificial intelligency** problematic.
 
 It is currently running on 2 different projects :
-> SmartIOT - Intelligency in smart objects  - ~~[More info here]()~~
+> SmartIOT - Intelligency in smart objects  - [More info here](https://github.com/smart-iot)
 
 > Fakerz - Fake websites detection - ~~[More info here]()~~
 
