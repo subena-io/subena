@@ -3,7 +3,6 @@
 import argparse
 import logging
 import os
-from subprocess import call
 
 import sqlalchemy
 from sqlalchemy.ext.declarative.api import declarative_base
@@ -35,7 +34,6 @@ try:
     DBSession = sessionmaker(bind = engine)
     Base.metadata.create_all(engine)
 except Exception:
-    #sudo /usr/local/mysql/support-files/mysql.server start
     logging.error('Database is not reachable with provided path : %s',URLS['SQL'])
     logging.error('Please check database instance is running and database name exists')
     exit(0)    

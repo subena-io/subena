@@ -3,8 +3,6 @@
 
 from package.alerts.main import execute as calculateAlerts
 
-#sudo /usr/local/mysql/support-files/mysql.server start 
-
 if __name__ == '__main__':
     try:
         calculateAlerts()

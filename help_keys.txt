@@ -1,0 +1,20 @@
++-------------------------------------+
+| Please find below some usefull keys |
++-------------------------------------+
+
++-----+
+| GIT |
++-----+
+
++ change default editor for git +
+git config --global core.editor "vim"
+
++----------+
+| Database |
++----------+
+
++ database path +
+mysql://root:@localhost:8888/sub_ai
+
++ start mysql instance according to where service is installed +
+sudo /usr/local/mysql/support-files/mysql.server start
