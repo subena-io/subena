@@ -3,13 +3,15 @@
 import argparse
 import logging
 import os
+from subprocess import call
 
 import sqlalchemy
 from sqlalchemy.ext.declarative.api import declarative_base
 from sqlalchemy.orm.session import sessionmaker
 
-if os.environ['SUBDB'] == '':
-    os.environ['SUBDB'] = 'mysql://root:@localhost:8888/db_subia'
+#if no env variable has been defined, a default one is set
+if not(os.environ.has_key("SUBDB")):
+    os.environ['SUBDB'] = 'mysql://root:@localhost:8888/sub_ai'
 
 URLS = {
     'SQL':os.environ['SUBDB'],
@@ -26,8 +28,14 @@ if args.verbose:
 else:
     logging.basicConfig(format="%(levelname)s: %(message)s", level=logging.WARNING)
 
-engine = sqlalchemy.create_engine(URLS['SQL'])
-Session = sessionmaker(bind=engine)
-Base = declarative_base(bind=engine)
-DBSession = sessionmaker(bind = engine)
-Base.metadata.create_all(engine)
+try:
+    engine = sqlalchemy.create_engine(URLS['SQL'])
+    Session = sessionmaker(bind=engine)
+    Base = declarative_base(bind=engine)
+    DBSession = sessionmaker(bind = engine)
+    Base.metadata.create_all(engine)
+except Exception:
+    #sudo /usr/local/mysql/support-files/mysql.server start
+    logging.error('Database is not reachable with provided path : %s',URLS['SQL'])
+    logging.error('Please check database instance is running and database name exists')
+    exit(0)    
