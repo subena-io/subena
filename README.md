@@ -47,7 +47,7 @@ The architecture is based on easy concepts :
 >Criteria can be linked with each other.
 >>Criterion << N : N >> Criterion
  
-Database named `db_subia` contains following tables :
+Database named `sub_ia` contains following tables :
 
 | Tables     | Description
 |------------|----------------------------------------------------
@@ -67,14 +67,14 @@ An init MySQL script can be found at the following path `scripts/init-schema.sql
 An example of database with data can be found at `scripts/example.sql`. In this example, values are get from 8 criteria corresponding to 8 sensors.
 
 ##Project
-Hearth of algorithm is contained in `package`folder.
+Hearth of algorithm is contained in `package` folder.
 
 `alerts` folder contains methods for storing `unexceptable` events 
 `learning` parameter and structure learning algorithm
 `model` defines classes linked with database
 
+For launching project just execute main script :
+>python scripts/main.py -v
+
 ##Credits
 Author : Jessy HANZO
-
-
-
