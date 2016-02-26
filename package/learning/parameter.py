@@ -238,7 +238,7 @@ def getProbaForAllMeasures():
                 #print [np.count_nonzero([(m == cc).all() for cc in catChild]) for m in measures]
                 
     if istats > 0:
-        logging.info( '%s stats have been calculated and inserted in database',istats )
+        print 'SUCCESS: {} stats have been calculated and inserted in database'.format(istats) 
 
 def getAllMeasures():
     """
