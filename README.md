@@ -47,7 +47,9 @@ The architecture is based on easy concepts :
 >Criteria can be linked with each other.
 >>Criterion << N : N >> Criterion
  
-Database named `sub_ia` contains following tables :
+Used database `sub_ia` is :
+
+![alt](https://github.com/subena-io/resources/blob/master/images/db_model.png)
 
 | Tables       | Description
 |--------------|----------------------------------------------------
@@ -58,8 +60,6 @@ Database named `sub_ia` contains following tables :
 | `settings`   | Contains any additional parameters
 | `stats`      | Algorithm calculated relevant correlation between sensors and store value here
 | `value`      | Values for criteria. One line equals to one value for one criterion at a given timestamp
-
-![alt](https://github.com/subena-io/resources/blob/master/images/db_model.png)
 
 ##Configuration
 Thanks to **SQLAlchemy**, every kind of database should be supported but only MySQL has been effectively used and tested for now.
