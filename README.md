@@ -10,6 +10,10 @@ It is currently running on 2 different projects :
 
 The aim is to detect *unexceptable* things. The whole problem is to define in mathematics words how an event can be considered as *unexceptable*.
 
+##Quick overview
+
+![alt](https://github.com/subena-io/resources/blob/master/images/overview.png)
+
 ##Requirements
 
 ###Docker
@@ -47,7 +51,7 @@ The architecture is based on easy concepts :
 >Criteria can be linked with each other.
 >>Criterion << N : N >> Criterion
  
-Used database `sub_ia` is :
+Thus, used database `sub_ia` is :
 
 ![alt](https://github.com/subena-io/resources/blob/master/images/db_model.png)
 
