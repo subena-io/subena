@@ -17,11 +17,11 @@ Following points are a list of non exhausted points to implement, please let me 
 				[ ] MCAR
 				[ ] MAR
 				[ ] NMAR
-		Learning structure
+		Learning structur
+			[ ] Maximization of score
 			Search conditionnal independencies 
 				[ ] Chi2 algorithm
 				[ ] PC algorithm
 				[ ] IC algorithm
-				[ ] Maximization of score
 			[ ] Known variables
 			[ ] Half known variables
