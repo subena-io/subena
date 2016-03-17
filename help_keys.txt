@@ -18,3 +18,44 @@ mysql://root:@localhost:8888/sub_ai
 
 + start mysql instance according to where service is installed +
 sudo /usr/local/mysql/support-files/mysql.server start
+
++--------+
+| Docker |
++--------+
+
++ create image +
+docker build --no-cache=true –tag=DOCKER_PROJECT_IMAGE_NAME .
+
++ see containers available +
+docker ps -a
+
+---
+
++ create container / open port 5000 / link with mysql container +
+docker create --tty --interactive --name="DOCKER_PROJECT_CONTAINER_NAME" -p 5000:5000 --link mysql :mysql DOCKER_PROJECT_IMAGE_NAME
+
++ start container +
+docker start DOCKER_PROJECT_CONTAINER_NAME
+
++ stop container +
+docker stop DOCKER_PROJECT_CONTAINER_NAME
+
++ remove container +
+docker rm DOCKER_PROJECT_CONTAINER_NAME
+
++ access container in command line
+docker exec -ti DOCKER_PROJECT_CONTAINER_NAME bash
+
++ construct container +
+docker build -t DOCKER_PROJECT_CONTAINER_NAME
+
+---
+
++ in one line mode +
+docker run -t -i DOCKER_PROJECT_IMAGE_NAME /bin/bash
+
+---
+
+
+
+
