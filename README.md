@@ -1,4 +1,4 @@
-Subena Artificial Intelligence project
+Subena Artificial Intelligence
 ===
 
 The following project has been developped for bringing a solution to **artificial intelligency** problematic.
