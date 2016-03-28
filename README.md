@@ -19,13 +19,11 @@ The aim is to detect *unexceptable* things. The whole problem is to define in ma
 ###Docker
 [optional] [Dockerfile](https://www.docker.com/) in base project can be used in order to facilitate environment installation.
 
-For a quick installation on getting a valid environment please follow these steps :
-- set an instance of MySQL and get address for accessing to, ex : mysql://root@:127.0.0.1:3306/db_subia
-- put this address in Dockerfile if you want to configure it as an env variable else default value is in base.py
-- specify in Dockerfile if you want to get repo from Github or local install
-- build your dockerfile (this will take a while for downloading all required lib) : `docker build --no-cache=true --tag=subena-ia .`
-- run your docker instance and open a bash `docker run -ti subena-ia bash`
+Docker-compose can be used for having multiple container instances (1 Db container / 2 python container) thanks to docker-compose.yml.dist.
 
+Please note two files are available in 'docker' folder according to your server 
+- `rpi/Dockerfile` Raspberry Debian OS configured thanks to Hypriot team [See Hypriot Blog](http://blog.hypriot.com/)
+- `standard/Dockerfile` Standard configuration (Linux, Mac OS, Windows)
 
 ###Python package
 Project is running on Python v2.7
