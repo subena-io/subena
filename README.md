@@ -23,7 +23,7 @@ Docker-compose can be used for having multiple container instances (1 Db contain
 
 Please note two files are available in 'docker' folder according to your server 
 - `rpi/Dockerfile` Raspberry Debian OS configured thanks to Hypriot team [See Hypriot Blog](http://blog.hypriot.com/)
-- `standard/Dockerfile` Standard configuration (Linux, Mac OS, Windows)
+- `std/Dockerfile` Standard configuration (Linux, Mac OS, Windows)
 
 ###Python package
 Project is running on Python v2.7
