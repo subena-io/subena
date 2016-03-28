@@ -10,7 +10,7 @@ from sqlalchemy.orm.session import sessionmaker
 
 #if no env variable has been defined, a default one is set
 if not(os.environ.has_key("SUBDB")):
-    os.environ['SUBDB'] = 'mysql://root:@127.0.0.1:3306/sub_ai'
+    os.environ['SUBDB'] = 'mysql://root:cnim@127.0.0.1:3306/sub_ai'
 
 URLS = {
     'SQL':os.environ['SUBDB'],

@@ -17,8 +17,8 @@
 
 
 DROP DATABASE IF EXISTS db_subia;
-CREATE DATABASE db_subia;
-use db_subia;
+CREATE DATABASE sub_ia;
+use sub_ai;
 
 --
 -- Table structure for table `alerts`

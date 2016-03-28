@@ -1,0 +1,19 @@
+sub_db:
+    image: hypriot/rpi-mysql
+    ports:
+        - "3306:3306"
+    environment:
+        - "MYSQL_ROOT_PASSWORD=cnim"
+        - "MYSQL_USER=root"
+        - "MYSQL_PASSWORD=cnim"
+        - "MYSQL_DATABASE=sub_ai"
+
+sub_server:
+    build: ./docker/rpi/
+    volumes:
+        - ".:/home/subena:rw"
+    links:
+        - "sub_db:sub_db"
+    working_dir: "/home/subena"
+    ports:
+        - "5000:5000"
