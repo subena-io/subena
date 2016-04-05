@@ -23,6 +23,9 @@ sudo /usr/local/mysql/support-files/mysql.server start
 | Docker |
 +--------+
 
++ docker compose up (build/start) in background +
+docker-compose up -d
+
 + create image +
 docker build --no-cache=true –tag=DOCKER_PROJECT_IMAGE_NAME .
 

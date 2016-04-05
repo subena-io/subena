@@ -1,7 +1,7 @@
 sub_db:
     image: hypriot/rpi-mysql
     ports:
-        - "3306:3306"
+        - "3307:3306"
     environment:
         - "MYSQL_ROOT_PASSWORD=cnim"
         - "MYSQL_USER=root"
@@ -16,4 +16,6 @@ sub_server:
         - "sub_db:sub_db"
     working_dir: "/home/subena"
     ports:
-        - "5000:5000"
+        - "5007:5000"
+    environment:
+        - "SUBDB=mysql://root:cnim@192.168.0.117:3307/sub_ai"

@@ -1,9 +1,5 @@
 FROM python:2.7
 
-## project environment variable
-#if you need any env variable please set here
-#ENV SUBDB mysql://root:@127.0.0.1:3306/db_subia
-
 #create a repo for project
 RUN mkdir -p /opt/subena
 
